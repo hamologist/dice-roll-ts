@@ -2,8 +2,9 @@ import express from "express";
 import { rollRouter } from "./controllers/roll";
 
 const app = express();
-const port = process.env.PORT || 3000;
+const port: number = Number(process.env.PORT) || 3000;
+const hostname: string = process.env.HOSTNAME || 'localhost';
 
 app.use('/roll', rollRouter);
 
-app.listen(port, () => console.log(`Dice Roll listening on port ${port}!`));
+app.listen(port, hostname, () => console.log(`Dice Roll listening on port ${port}!`));
