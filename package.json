@@ -13,8 +13,8 @@
     "typescript": "^3.8.2"
   },
   "scripts": {
-    "build": "tsc",
-    "watch": "tsc -w",
+    "build": "./node_modules/typescript/bin/tsc",
+    "watch": "./node_modules/typescript/bin/tsc -w",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node dist/server.js",
     "nodemon": "./node_modules/nodemon/bin/nodemon.js dist/server.js"
